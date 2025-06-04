@@ -1,1 +1,5 @@
-# android_device_realme_nashc
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
