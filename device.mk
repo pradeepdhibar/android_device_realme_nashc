@@ -149,7 +149,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss-service.mediatek
-
+  
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
