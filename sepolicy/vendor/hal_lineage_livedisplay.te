@@ -9,3 +9,7 @@ vndbinder_use(hal_lineage_livedisplay_nashc)
 
 allow hal_lineage_livedisplay_nashc vendor_sysfs_graphics:file rw_file_perms;
 allow hal_lineage_livedisplay_nashc vendor_sysfs_graphics:dir search;
+
+# Allow AIDL LiveDisplay sysfs HAL to access Oplus display nodes
+allow hal_lineage_livedisplay_sysfs vendor_sysfs_graphics:dir search;
+allow hal_lineage_livedisplay_sysfs vendor_sysfs_graphics:file rw_file_perms;

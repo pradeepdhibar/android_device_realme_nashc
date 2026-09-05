@@ -16,8 +16,8 @@
 #include <string.h>
 #include <utils/SystemClock.h>
 
-#include <oplus/oplus_sensor_event.h>
-#include <oplus/oplus_sensor_types.h>
+#include <oplus_sensor_event.h>
+#include <oplus_sensor_types.h>
 
 #include "oplus_virtual_sensors.h"
 

@@ -9,6 +9,9 @@ cc_library_shared {
     srcs: [
         "oplus_virtual_sensors.cpp",
     ],
+    include_dirs: [
+        "kernel/realme/nashc/include/uapi/oplus",
+    ],
     shared_libs: [
         "libcutils",
         "liblog",
@@ -16,7 +19,6 @@ cc_library_shared {
     ],
     header_libs: [
         "libhardware_headers",
-        "generated_kernel_headers",
     ],
     vendor: true,
 }

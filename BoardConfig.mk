@@ -49,6 +49,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += init_on_alloc=1
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
@@ -69,8 +70,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -78,7 +78,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/nashc
 TARGET_KERNEL_CONFIG := nashc_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r536225
+TARGET_KERNEL_CLANG_VERSION := r547379
 TARGET_KERNEL_NO_GCC := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
@@ -181,3 +181,6 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
 include vendor/realme/nashc/BoardConfigVendor.mk
+
+# Legacy proprietary blobs require AIDL ndk_platform libraries
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
