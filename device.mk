@@ -288,3 +288,8 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/realme/nashc/nashc-vendor.mk)
+
+# Android 13 MediaTek RIL compatibility
+PRODUCT_PACKAGES += \
+    libbinder-v33 \
+    libutils-v33

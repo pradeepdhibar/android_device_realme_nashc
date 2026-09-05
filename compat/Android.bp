@@ -1,0 +1,19 @@
+cc_prebuilt_library_shared {
+    name: "libbinder-v33",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    srcs: ["libbinder-v33.so"],
+    compile_multilib: "64",
+    shared_libs: [
+        "libbase",
+        "libc",
+        "libc++",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libm",
+        "libutils-v33",
+    ],
+}
