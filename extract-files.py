@@ -77,7 +77,17 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('liblog.so'),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
-        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
+        # Preserve PictureQuality threadLoop x25 on the PQ fallback path.
+        # Without this, x25 becomes NULL and CCORR crashes reading [x25 + 0x90].
+        .binary_regex_replace(
+            b'\x21\xff\xff\x90\x02\xff\xff\xf0\x21\xfc\x0a\x91\x42\x48\x39\x91',
+            b'\x09\xff\x91\x52\x49\x00\xa0\x72\x79\x03\x09\x8b\x07\x01\x00\x14',
+        )
+        .binary_regex_replace(
+            b'\xe0\x03\x1b\xaa\xcd\x74\x00\x94\x76\x13\x00\x36\x21\xff\xff\x90',
+            b'\xe0\x03\x1b\xaa\xcd\x74\x00\x94\x36\xf2\x07\x36\x21\xff\xff\x90',
+        ),
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt6785.so': blob_fixup()
