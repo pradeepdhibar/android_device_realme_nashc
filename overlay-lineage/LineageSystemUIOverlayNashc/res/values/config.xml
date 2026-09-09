@@ -14,5 +14,5 @@
     <color name="config_udfpsColor">#00ffffff</color>
 
     <!-- Use framework FOD dimming instead of kernel dimming -->
-    <bool name="config_udfpsFrameworkDimming">true</bool>
+    <bool name="config_udfpsFrameworkDimming">false</bool>
 </resources>
