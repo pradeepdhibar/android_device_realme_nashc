@@ -310,3 +310,8 @@ PRODUCT_ENABLE_UFFD_GC := false
 PRODUCT_PACKAGES += \
     libbinder-v33 \
     libutils-v33
+
+# Optional OplusCamera standalone port
+ifneq ($(WITH_OPLUS_CAMERA),false)
+$(call inherit-product-if-exists, vendor/realme/nashc-opluscamera/nashc-opluscamera.mk)
+endif

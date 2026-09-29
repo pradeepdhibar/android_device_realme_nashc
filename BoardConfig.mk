@@ -199,3 +199,8 @@ include vendor/realme/nashc/BoardConfigVendor.mk
 
 # Legacy proprietary blobs require AIDL ndk_platform libraries
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
+# Optional OplusCamera standalone port
+ifneq ($(WITH_OPLUS_CAMERA),false)
+-include vendor/realme/nashc-opluscamera/BoardConfigOplusCamera.mk
+endif
