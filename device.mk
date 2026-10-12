@@ -313,5 +313,11 @@ PRODUCT_PACKAGES += \
 
 # Optional OplusCamera standalone port
 ifneq ($(WITH_OPLUS_CAMERA),false)
-$(call inherit-product-if-exists, vendor/realme/nashc-opluscamera/nashc-opluscamera.mk)
+ifeq ($(WITH_OPLUS_CAMERA),true)
+$(call inherit-product, vendor/realme/nashc-opluscamera/nashc-opluscamera.mk)
 endif
+endif
+
+# AxionOS debug mode (official README)
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.ax_debug_enabled=1
