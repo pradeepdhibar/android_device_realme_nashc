@@ -187,6 +187,10 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 # Inherit the proprietary files
 include vendor/realme/nashc/BoardConfigVendor.mk
 
+SOONG_CONFIG_NAMESPACES += nashc_camera
+SOONG_CONFIG_nashc_camera += use_oplus
+SOONG_CONFIG_nashc_camera_use_oplus := $(if $(filter true,$(WITH_OPLUS_CAMERA)),true,false)
+
 # Legacy proprietary blobs require AIDL ndk_platform libraries
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 

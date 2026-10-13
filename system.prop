@@ -7,7 +7,7 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.wfc_avail_ovr=0
 
 # SystemUI
-persist.sysui.disableBlur=true
+persist.sysui.disableBlur=false
 
 # Zygote
 zygote.critical_window.minute=10

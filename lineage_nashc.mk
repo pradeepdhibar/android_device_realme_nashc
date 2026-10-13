@@ -30,3 +30,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=RMX3085L1 \
     SystemDevice=RMX3085L1 \
     SystemName=RMX3085
+
+# AxionOS device information
+AXION_CAMERA_REAR_INFO := 64,8,2,2
+AXION_CAMERA_FRONT_INFO := 16
+AXION_MAINTAINER := Pradeep_Dhibar
+AXION_PROCESSOR := MediaTek_Helio_G95

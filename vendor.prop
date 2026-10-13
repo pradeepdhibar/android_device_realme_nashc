@@ -234,7 +234,7 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.supports_background_blur=1
 
 # Disable blur during app launch
-ro.launcher.blur.appLaunch=0
+ro.launcher.blur.appLaunch=1
 
 # TEE
 ro.hardware.kmsetkey=trustonic
