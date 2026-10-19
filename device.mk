@@ -320,4 +320,4 @@ endif
 
 # AxionOS debug mode (official README)
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.ax_debug_enabled=1
+    persist.sys.ax_debug_enabled=0

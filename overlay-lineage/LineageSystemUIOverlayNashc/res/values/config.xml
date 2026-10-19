@@ -15,4 +15,10 @@
 
     <!-- Use framework FOD dimming instead of kernel dimming -->
     <bool name="config_udfpsFrameworkDimming">false</bool>
+
+    <!-- Experimental MTK HWComposer FOD dim-layer integration -->
+    <bool name="config_udfpsMtkGhbmDimming">true</bool>
+
+    <!-- Match the stock MTK HWComposer FOD dim-layer name -->
+    <string name="config_udfpsHbmDimLayer" translatable="false">OnScreenFingerprintDimLayer</string>
 </resources>
