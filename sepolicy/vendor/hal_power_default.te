@@ -2,3 +2,11 @@ allow hal_power_default vendor_sysfs_gpu:dir search;
 allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
 allow hal_power_default vendor_proc_display:dir search;
 allow hal_power_default vendor_proc_display:file rw_file_perms;
+
+# Power HAL cpufreq / ppm / perfmgr nodes
+allow hal_power_default proc_cpufreq:dir search;
+allow hal_power_default proc_cpufreq:file rw_file_perms;
+allow hal_power_default proc_ppm:dir search;
+allow hal_power_default proc_ppm:file rw_file_perms;
+allow hal_power_default proc_perfmgr:dir search;
+allow hal_power_default proc_perfmgr:file rw_file_perms;
